@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Entendendo o Laço "For"</h1>
+
+  <button onclick="gerar()">Gerar paragrafos</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function gerar(){
+
+      const divResultado = document.getElementById ('resultado')
+
+      for (let contador = 0; contador < 9 ; contador++){
+        divResultado.innerHTML+=`${contador} <br>`
+      }
+    }
+  </script>
+</body>
+</html>

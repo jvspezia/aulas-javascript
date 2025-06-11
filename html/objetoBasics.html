@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Acordo meus ovo</h1>
+</body>
+<script>
+
+  //Declarando um objeto em Javascript
+  let aluno = {};
+
+  //Declarando um objeto com prioridades iniciais
+  let aluno2 = {
+    codigo: 1,
+    nome: "Jack",
+    matricula: true
+  }
+
+  console.log(aluno);
+  console.log(aluno2);
+
+  //Obtendo o valor de uma propriedade de objeto
+  console.log(aluno2.nome);
+
+  //Reatribuir o valor para uma proriedade do objeto
+  aluno2.nome = "Jack Beagle";
+
+  console.log(aluno2);
+
+  console.log(aluno);
+
+  aluno.nome = "Kid Bengala";
+
+
+  const aluno3 = {
+    codigo: 3,
+    nome: 'lana rhodes',
+    endereco: {
+      rua: "Rua nove",
+      numero: 69,
+      bairro: "Centro",
+      estado: {
+        sigla: 'SC',
+        nome: "Santa Catarina"
+      }
+    }
+  }
+
+  //Imprimindo uma subpropriedade do objeto
+
+  console.log("Rua: " + aluno3.endereco.rua);
+  console.log("Estado: " + aluno3.endereco.estado.sigla);
+
+  const aluno4 = {
+    codigo: 4,
+    nome: "Eme Withe",
+    notas: [6, 9, 69, 4, 10]
+  }
+
+  console.log('Notas do aluno: '+ aluno4.notas);
+  console.log("Terceira nota: " + aluno4.notas[2])
+
+</script>
+
+</html>

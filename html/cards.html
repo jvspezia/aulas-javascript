@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  padding: 20px;
+}
+
+h1 {
+  background-color: #00acc1;
+  color: white;
+  padding: 15px 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inputs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px #00796b;
+  padding: 20px;
+  margin: 10px;
+  background-color: #004d40;
+  color: white;
+  border-radius: 12px;
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1em;
+}
+
+button {
+  background-color: #00796b;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:active {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card {
+  padding: 16px;
+  width: 220px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+</style>
+
+<body>
+  <h1>Gerando cards com dados</h1>
+
+  <div class="inputs">
+    <input type="text" id="codigo" placeholder="Digite o codigo"><br>
+    <input type="text" id="preco" placeholder="Digite o preco"><br>
+    <input type="text" id="desc" placeholder="Digite a descrição"><br>
+    <br>
+    <button onclick="Inserir()">Inserir Dados</button>
+  </div>
+
+  <div class="box" id="box">
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function Inserir() {
+
+      const divBox = document.getElementById('box')
+      const inputCod = Number(document.getElementById('codigo').value)
+      const inputpreco = Number(document.getElementById('preco').value)
+      const inputDesc = (document.getElementById('desc').value)
+
+      const dados = {
+        codigo: inputCod,
+        preco: inputpreco,
+        descricao: inputDesc
+      }
+
+      divBox.innerHTML +=
+        "Codigo: " + dados.codigo + "<br>" +
+        "Preço: " + dados.preco + "<br>" +
+        "Descrição: " + dados.descricao + "<br> <br>"
+
+
+
+        
+    }
+
+  </script>
+</body>
+
+</html>

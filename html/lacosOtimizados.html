@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Trabalhando com laços otimizados</h1>
+
+  <div id="listaFor"></div>
+  
+  
+  <h2>Agora com laço FOR...EACH</h2>
+  <div id="listaForEach"></div>
+  <script>
+
+  const listaProdutos = [
+    'Brigadeiro','Coxinha','Esfirra','Pastel','Bolo de Chocolate','Sonho'
+  ]
+const divListaFor = document.getElementById('listaFor')
+
+  //Percorrendo a lista através de um FOR tradicional
+
+  for (let contador = 0; contador < listaProdutos.length; contador++){
+    divListaFor.innerHTML += `<p> ${listaProdutos[contador]} <p>` 
+    }
+    const divListaForEach = document.getElementById('listaForEach')
+    //Percorrendo a lista através do FOR...EACH
+    listaProdutos.forEach( function(produto){
+      divListaForEach.innerHTML += `<p> ${produto} <p>` 
+      })
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<h1>Entendendo vetores/array
+</h1>  
+  
+
+
+
+
+
+
+<script>
+
+  //Declarar um vetor novo
+const listaAlunos=['Andrei', ' xinelo' , 'meuzovo']
+
+
+//Imprimindo o tipo da constante
+console.log(typeof listaAlunos)
+
+//Imprimindo o tamanho da lista
+console.log(listaAlunos.length)
+
+//Imprimindo o tamanho da lista
+console.log(listaAlunos)
+
+//Imprimindo lista em forma de texto
+console.log(listaAlunos.toString())
+
+//Manipulando o vetor
+
+//Removendo o ú((ltimo elemento do vetor
+listaAlunos.pop()
+console.log(listaAlunos.toString())
+
+//Inserir o primeiro elemento da lista
+listaAlunos.unshift('Texte')
+console.log(listaAlunos.toString())
+
+
+//Inserir o ultimo elemento da lista
+listaAlunos.push('Texte')
+console.log(listaAlunos.toString())
+
+
+//Remover o primeiro elemento da lista
+listaAlunos.shift()
+console.log(listaAlunos.toString())
+
+
+//splice
+//1º parametro: posição do elemento desejado 
+//2º parametro: Quantidade de elementos a serem removido a partir daquela posição
+//3º parametro: Novos elementos inseridos na posição especifica
+
+//Remover em uma posição específica
+listaAlunos.splice(1,1)
+console.log(listaAlunos.toString())
+
+//Inserir o elemento a partir de uma posição especifica
+listaAlunos.splice(1,0,'Texte', "Jack",'TEXTE2')
+console.log(listaAlunos.toString())
+
+
+//Editar um elemento em uma posiçao especifica 
+listaAlunos.splice(2,1, 'Beagle')
+console.log(listaAlunos.toString())
+
+//Capturar o índice de um elemento da lista
+const indiceTexte = listaAlunos.indexOf('TEXTE2')
+console.log(listaAlunos.toString())
+console.log("Indice do elemento TEXTE2 - " + indiceTexte)
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  background-position: center;
+  background-image: url(/imagens/fundocabare.webp);
+  }
+ .divisor{
+  margin-top: 60px;
+  padding: 20px;
+  border: solid 3px;
+  background-color: bisque;
+  text-align: center;
+ }
+ .container{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+ }

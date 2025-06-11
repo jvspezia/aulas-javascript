@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box{
+      background-color: rgb(106, 90, 255);
+      padding:  16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      flex-wrap: wrap;
+      margin: 10px;
+    }
+.card{
+  padding: 10px;
+  width: 100px;
+  background-color: brown;
+  color: aliceblue;
+}
+button{
+  background-color: seagreen;
+  color: aliceblue;
+  padding: 10px;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+
+button:active{
+  background-color: rgb(19, 71, 42);
+  width: 11%;
+  padding: 12px;
+  
+}
+
+.inputs{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px rgb(19, 71, 42);
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: -10px;
+  background-color: rgb(19, 71, 42) ;
+  color: rgb(106, 90, 255)
+  
+}
+input{
+  width: 100%;
+
+}
+
+body{
+  text-align: center;
+  display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: rgb(192, 247, 228);
+}
+h1{
+  background-color: aqua;
+  padding: 10px;
+  margin: 20px;
+}
+  </style>
+</head>
+<body>
+  
+  <h1>Gerando site atraves do Javascript</h1>
+  <div class="inputs">
+    <label for="texto">Adicione um texto</label><br>
+    <input type="text" id="texto"><br>
+    <label for="num">Adicione um numero</label><br>
+    <input type="text" id="num"><br>
+  </div>
+  <button onclick="addcard()">Adiciona ai</button>
+
+   <div class="box" id="box">
+     <P>Nenhum card criado </P>
+   </div>
+   
+</body>
+<script src="/javascript/gerandoCard.js"></script>
+</html>
