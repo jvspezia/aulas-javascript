@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  div{
+    border: solid 2px black;
+    width: 100%;
+    height: 30%;
+
+  }
+</style>
+<body>
+  <H1>Seletor de positivo e negativo</H1>
+
+  <input type="number" id="numero">
+  <button onclick="validar()">Validar</button>
+  <br><br>
+
+  <div id="par">
+    Numeros pares
+  </div>
+  <br><br>
+  <div id="impar">
+    numeros impares
+  </div>
+
+
+
+
+  <script>
+    
+    //criando constantes para as divs
+    const divPar = document.getElementById('par')
+    const divImpar = document.getElementById('impar')
+
+
+    //criando uma lista vazia 
+  
+    const lista = [
+     
+  ]
+  
+  
+  
+  function validar(){
+    
+    lista.push('numero')
+    
+    const InputNumero = Number(document.getElementById('numero').value) 
+    
+    if (InputNumero %2 == 0){
+      divPar.innerHTML += `<p>`+ InputNumero +`</p>` 
+    }
+    
+    if (InputNumero %2 == 1){
+      divImpar.innerHTML += `<p>`+ InputNumero +`</p>` 
+    }
+
+    
+     //adicionando um "console.log" para acompanhar a lista
+    console.log(lista.toString)
+}
+
+
+  </script>
+</body>
+
+</html>

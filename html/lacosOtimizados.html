@@ -1,38 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <h1>Trabalhando com laços otimizados</h1>
 
   <div id="listaFor"></div>
-  
-  
+
+
   <h2>Agora com laço FOR...EACH</h2>
   <div id="listaForEach"></div>
+
+
+  <h2>Agora com laço FOR...EACH com arrow function</h2>
+  <div id="listaArrow"></div>
+
+
+  <h2>Agora com laço FOR...EACH com function</h2>
+  <div id="listaFunc"></div>
+
+<h2>Lista de positivos e depois os negativos</h2>
+
+<div id="listaCalculo"></div>
+
+
+
+
+
+
   <script>
 
-  const listaProdutos = [
-    'Brigadeiro','Coxinha','Esfirra','Pastel','Bolo de Chocolate','Sonho'
-  ]
-const divListaFor = document.getElementById('listaFor')
+    const listaProdutos = [
+      'Brigadeiro', 'Coxinha', 'Esfirra', 'Pastel', 'Bolo de Chocolate', 'Sonho'
+    ]
 
-  //Percorrendo a lista através de um FOR tradicional
+    //Percorrendo a lista através de um FOR tradicional
 
-  for (let contador = 0; contador < listaProdutos.length; contador++){
-    divListaFor.innerHTML += `<p> ${listaProdutos[contador]} <p>` 
+    const divListaFor = document.getElementById('listaFor')
+
+    for (let contador = 0; contador < listaProdutos.length; contador++) {
+      divListaFor.innerHTML += `<p> ${listaProdutos[contador]} <p>`
     }
-    const divListaForEach = document.getElementById('listaForEach')
+
+
     //Percorrendo a lista através do FOR...EACH
-    listaProdutos.forEach( function(produto){
-      divListaForEach.innerHTML += `<p> ${produto} <p>` 
-      })
+
+    const divListaForEach = document.getElementById('listaForEach')
+
+    listaProdutos.forEach(function (produto) {
+      divListaForEach.innerHTML += `<p> ${produto} </p>`
+    })
+
+    //Percorrendo a lista através do FOR...EACH
 
 
-</script>
+    const divListaArrow = document.getElementById('listaArrow')
+    listaProdutos.forEach((produto) => {
+      divListaArrow.innerHTML += `<p> ${produto} </p>`
+    })
+
+    //Imprimindo a lista de produtos através de um ForEach atrelado à uma função
+    //préviamente existente
+    const divListaFunc = document.getElementById('listaFunc')
+    function ImprimirLista(item) {
+      divListaFunc.innerHTML += `<p> ${item}</p>`
+    }
+    listaProdutos.forEach(ImprimirLista)
+
+
+//usando FOR...EACH para imrpimir numeros positivos
+     
+const listaNumeros = [-8, 69, -1,0,20 , 9,569,-22]
+const divListaCalculo = document.getElementById('listaCalculo')
+
+listaNumeros.forEach(numero=>{
+  if (numero >= 0){
+    divListaCalculo.innerHTML += 
+    `<p>`+ numero +`</p>`
+  }
+})
+
+listaNumeros.forEach(numero=>{
+  if (numero < 0){
+    divListaCalculo.innerHTML += 
+    `<p>`+ numero +`</p>`
+  }
+})
+
+
+  </script>
 
 </body>
+
 </html>
