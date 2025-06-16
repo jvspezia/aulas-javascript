@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Entendendo funções</h1>
+
+  <input type="number" id="numA">
+  <input type="number" id="numb">
+  <button onclick="realizarOperacao('Somar')">Somar</button>
+  <button onclick="realizarOperacao('Subtrair')">Subtrair</button>
+  <button onclick="realizarOperacao('Multiplicar')">Multiplicar</button>
+  <br><br>
+
+  <div id="resultado"></div>
+
+
+  <script>
+
+
+    //Função simples COM parametros
+    function realizarOperacao(operacao) {
+      const a = Number(document.getElementById('numA').value)
+      const b = Number(document.getElementById('numb').value)
+
+      if (operacao == "Somar") {
+        imprimirSoma(a, b)
+      }
+      if (operacao == "Subtrair") {
+        imprimirSubtacao(a, b)
+      }
+      if (operacao == "Multiplicar") {
+        multiplicar(a, b)
+        const resultado = multiplicar(a, b)
+        const divResultado = document.getElementById('resultado')
+        divResultado.innerHTML = `A mutiplicação entre ${a} e ${b} é ${resultado}`
+      }
+
+    }
+
+
+    //Função simples COM parametros
+    function imprimirSoma(a, b) {
+      const divResultado = document.getElementById('resultado')
+      divResultado.innerHTML = `A soma entre ${a} e ${b} é ${a + b}`
+
+
+      //Função simples COM parametros
+    }
+    function imprimirSubtacao(a, b) {
+      const divResultado = document.getElementById('resultado')
+      divResultado.innerHTML = `A subtração entre ${a} e ${b} é ${a - b}`
+    }
+
+    
+    //Função simples SEM paramentros
+    function limparcampos() {
+      document.getElementById('numA').value = ''
+      document.getElementById('numB').value = ''
+
+      //Enviando o foco para o primeiro input
+      document.getElementById('numB').focus()
+
+    }
+
+    //Função COM retorno e COM parâmetros
+    function multiplicar(a, b) {
+      return a * b
+    }
+
+  </script>
+</body>
+
+
+</html>
